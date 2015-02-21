@@ -14,7 +14,6 @@ KPSALTSDIR="$KPDIR/salts"
 necho() {
 	# Mac's /bin/sh echo builtin doesn't have -n, so use external echo.
 	/bin/echo -n $*
-
 }
 
 generator0() {
@@ -97,4 +96,3 @@ done
 [ -n "$SALT" ] || saltfile
 PASSWORD="$SALT^$NONCE^$TARGET"
 generator${GEN} 2> /dev/null || fail "Try 0-4 as a generator, instead of $GEN."
-echo # Trailing newline to be nice.
