@@ -81,17 +81,18 @@ which shasum > /dev/null 2>&1 && SHA="shasum -b -a 256"
 
 [ -n "$SHA" ] || fail "Neither sha256 nor sha256sum found, exiting."
 
-for arg in $*; do
-	shift
-	case $arg in
-		-s) SALT=$1;;
-		-f) KPSALTFILE=$1;;
-		-n) NONCE=$1;;
-		-g) GEN=$1;;
+while [ $# -ne 0 ]; do
+	case $1 in
 		-h) help; exit 0;;
-		 *) TARGET=$arg;;
+		-s) SALT=$2;shift;;
+		-f) KPSALTFILE=$2;shift;;
+		-n) NONCE=$2;shift;;
+		-g) GEN=$2;shift;;
+		 *) TARGET=$1;;
 	esac
+	shift
 done
+
 [ -n "$TARGET" ] || helperr
 [ -n "$SALT" ] || saltfile
 PASSWORD="$SALT^$NONCE^$TARGET"
