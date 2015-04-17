@@ -69,6 +69,14 @@ Same as mode 1, but 10 characters before adding a prefix if "a" (not "z") and a 
 
 Same as mode 1, but 12 total characters.
 
+### Mode 5
+
+Same as mode 1, but 8 total characters.
+
+### Mode 9
+
+This is a stub indicating that you are manually supplying the password.
+
 ## License
 
 This is released under the [Unlicense](http://unlicense.org/), into the public domain.

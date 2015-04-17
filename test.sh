@@ -22,6 +22,7 @@ check 1 hS580Ghp0Jc8l2dwdI
 check 2 zhS580Ghp0Jc8l2dwdI!
 check 3 ahS580Ghp0J!
 check 4 hS580Ghp0Jc8
+check 5 hS580Ghp
 
 
 echo "Test passed!"

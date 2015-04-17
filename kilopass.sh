@@ -48,9 +48,14 @@ generator3() {
 
 generator4() {
 	# Upper/lower/number 12 characters.
-	# If you need something less secure than this, you probably shouldn't have an account there.
 	necho "$PASSWORD" | $SHA | xxd -r -p | base64 | tr -d '+' | tr -d '/' | head -c 12
 }
+
+generator5() {
+	# Upper/lower/number 8 characters.
+	necho "$PASSWORD" | $SHA | xxd -r -p | base64 | tr -d '+' | tr -d '/' | head -c 8
+}
+
 
 fail() {
 	echo $0: $* 1>&2
