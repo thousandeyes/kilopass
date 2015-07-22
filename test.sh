@@ -17,7 +17,7 @@ $KP && fail "Should return zero."
 $KP -h || fail "Help should return one."
 $KP -s salty && fail "kilopass without target argument or help should not return 0."
 $KP -s salty peppery | grep '^hS580Ghp0Jc8l2dwdI$' || fail "Default salty peppery failed."
-check 0 8733c96b306a12f7fcc77e924c34e6d8b8a0142bf7198fe8c32cab8af5ba4bab
+check 0 852e7cd06fa1a7425cf25d9dc1d23d8d6c1e195d5dc37b736990763b8e5ec922
 check 1 hS580Ghp0Jc8l2dwdI
 check 2 zhS580Ghp0Jc8l2dwdI!
 check 3 ahS580Ghp0J!

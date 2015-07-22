@@ -18,7 +18,7 @@ necho() {
 
 generator0() {
 	# Just a big, ugly sha256sum.
-	echo "$PASSWORD" | $SHA | cut -d ' ' -f 1 | tr -d '\n'
+	necho "$PASSWORD" | $SHA | cut -d ' ' -f 1 | tr -d '\n'
 }
 
 generator1() {
