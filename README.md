@@ -95,6 +95,6 @@ If you have questions or comments, please send them to
 opensource@thousandeyes.com, or to the following address:
 
 ThousandEyes, Inc.  
-301 Howard Street #1700  
+201 Mission Street #1700  
 San Francisco, CA  94105  
 Attn: ThousandEyes Open Source Projects
