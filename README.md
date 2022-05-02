@@ -6,9 +6,23 @@ Usage: kilopass [-s SALT] [-f SALTFILE] [-n NONCE] [-g GEN] [-h HELP] <user@doma
 Alternatively, create ~/.kilopass/salt with your salt, preferably chmod 600.
 ```
 
-Note that the salt on the command line may be visible to other users on your system. You can generally disable globally user-accessible /proc, or just use ~/.kilopass/salt to store your salt.
+Note that the salt on the command line may be visible to other users on your system. You can generally disable globally user-accessible /proc, or just use ``~/.kilopass/salt`` to store your salt.
 
-The -f saltfile option can be literal (/home/user/.kilopass/salts/dev), or relative "dev". If relative with no prefixing /, kilopass will search for a salt at $HOME/.kilopass/salts/(yoursalt).
+The -f saltfile option can be literal (``/home/user/.kilopass/salts/dev``), or relative ``dev``. If relative with no prefixing /, kilopass will search for a salt at ``$HOME/.kilopass/salts/(yoursalt)``.
+
+## Examples
+
+Generating a password using the default ``$HOME/.kilopass/salt`` file:
+
+``kilopass -g 1 -n 0 user@example.com && echo ""``
+
+Generating a password using a relative path file at ``$HOME/.kilopass/salts/prod.salt``:
+
+``kilopass -g 1 -n 0 -f prod.salt user@example.com && echo ""``
+
+Generating a password using an absolute path file at ``$HOME/mysecrets/salt``:
+
+``kilopass -g 1 -n 0 -f ~/mysecrets/salt user@example.com && echo ""``
 
 ## Overview
 
